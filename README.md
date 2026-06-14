@@ -2,7 +2,7 @@
 
 > A mixed-signal PCB implementing a complete AES3 digital audio transceiver — designed for use as a standalone node or daisy-chained across long cable runs for distributed speaker systems. Board manufactured, assembly and bringup in progress.
 
-![Status: Firmware Development](https://img.shields.io/badge/status-Firmware%20%20Development-orange)
+![Status: Firmware Development](https://img.shields.io/badge/status-Firmware%20Development-orange)
 ![Tool: KiCad](https://img.shields.io/badge/tool-KiCad-blue)
 ![Layers: 4](https://img.shields.io/badge/layers-4-lightgrey)
 
