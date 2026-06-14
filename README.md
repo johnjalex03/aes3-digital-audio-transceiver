@@ -2,7 +2,7 @@
 
 > A mixed-signal PCB implementing a complete AES3 digital audio transceiver — designed for use as a standalone node or daisy-chained across long cable runs for distributed speaker systems. Board manufactured, assembly and bringup in progress.
 
-![Status: Assembly & Bringup](https://img.shields.io/badge/status-assembly%20%26%20bringup-orange)
+![Status: Firmware Development](https://img.shields.io/badge/status-Firmware%20%20Development-orange)
 ![Tool: KiCad](https://img.shields.io/badge/tool-KiCad-blue)
 ![Layers: 4](https://img.shields.io/badge/layers-4-lightgrey)
 
@@ -17,7 +17,7 @@ The primary design challenge was mixed-signal partitioning: keeping the analog f
 
 ---
 
-<img src="hardware/layout/3D_Front.png" width="780"/>
+<img src="hardware/Pictures/Assembled.png" width="780"/>
 
 ---
 
@@ -26,8 +26,8 @@ The primary design challenge was mixed-signal partitioning: keeping the analog f
 | Subsystem | Detail |
 |---|---|
 | **AES3 Input** | Transformer-coupled differential input via PE65723NL-T2, RJ45 connector |
-| **Input front-end** | THS4522 fully differential amplifier — level shifts 2.5V (DE) → 3.3V (DE), VOCM biased at 1.65V |
-| **AES3 Receiver** | CS8416 — decodes AES3 to I2S (SDOUT, OSCLK, OLRCK), I2C configurable |
+| **Input front-end** | TI THS4522 high-speed fully differential amplifier — level shifts 2.5V (DE) → 3.3V (DE), VOCM biased at 1.65V |
+| **AES3 Receiver** | Cirrus Logic CS8416 — decodes AES3 to I2S (SDOUT, OSCLK, OLRCK), I2C configurable |
 | **Controller** | Raspberry Pi Pico — I2C control of CS8416, audio processing, speaker output |
 | **AES3 Output driver** | THS4522 fully differential amplifier — level shifts 3.3V (SE) → 5V (DE), VOCM biased at 2.5V |
 | **AES3 Output** | Differential output, RJ45 connector |
@@ -89,8 +89,8 @@ Key decisions:
 - [x] Schematic complete
 - [x] PCB layout complete
 - [x] Board manufactured
-- [ ] Assembly
-- [ ] Bringup — supply rails, CS8416 I2C comms, AES3 signal integrity
+- [x] Assembly
+- [x] Bringup — supply rails, CS8416 I2C comms, AES3 signal integrity
 - [ ] Firmware — Pico I2C config, audio processing, delay compensation
 - [ ] Daisy-chain validation
 
